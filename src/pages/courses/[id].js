@@ -2,7 +2,7 @@ import { useState } from "react"
 import Link from "next/link"
 import axios from "axios"
 import Navbar from "components/Navbar"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Backgroundcircles from "components/Backgroundcircles"
 function Subjects({ subjects, chapters, id }) {
 
@@ -85,6 +85,7 @@ function Subjects({ subjects, chapters, id }) {
              </div>
         
         {
+          
           isOpen ?
           
            (
@@ -95,12 +96,13 @@ function Subjects({ subjects, chapters, id }) {
             transform: "translate(-50%, -50%)",
           width: '1000px', height: '550px', overflowY: 'auto'  }}>
             <button 
-                className="mt-4 ml-3 text-md font-bold py-2 px-4  border border-black rounded text-[#7F56D9] " 
+                className="mt-4 ml-3 text-md font-bold py-2 px-4  border border-black  rounded text-[#7F56D9] " 
                 onClick={() => setOpen(false)}
               >
                 Back
               </button>
-              
+              <AnimatePresence>
+                
             <ul className="list-none p-8   mx-4 h-860 w-1440 "  style={{ width: 140 }}>
                 {chaptersList.map(chapter => (
 
@@ -108,7 +110,7 @@ function Subjects({ subjects, chapters, id }) {
                   <Link href={`/courses/notes/${chapter.lid}`} key={chapter.lid}>
                     <motion.div whileHover={{ scale: 1.1 }}>
                     <li key={chapter.lid} className=" ml-10 text-centre mt-6 opacity-90 h-32 text-center max-w-full my-8 rounded-xl border
-                    border-black flex items-center"style={{ minWidth: "800px" }}>
+                    border-black hover:border-[#F2921D] flex items-center"style={{ minWidth: "800px" }}>
                       
                       <h3 className="text-xl text-[#7F56D9] ml-10 space-y-10 font-inter font-bold">{chapter.lesson}</h3>
                       
@@ -117,8 +119,9 @@ function Subjects({ subjects, chapters, id }) {
                   </Link>
                   
                 ))}
+                
               </ul>
-              
+              </AnimatePresence>
             <div className="p-8"> 
                          
               
