@@ -60,7 +60,7 @@ function Courses({ courses }) {
                       <li key={course.id} className={` w-42 max-w-auto shadow-2xl bg-[#FFFFFF] opacity-80 rounded-lg my-8 flex items-center`} 
                       style={{Width: "200px",height:'150px' }}>
                         <div className="flex-1 items-center mr-40 ml-80 ">
-                          <h3 className="text-2xl space-y-10  font-bold ">{course.name}</h3>
+                          <h3 className="text-2xl space-y-10 font-inter font-bold ">{course.name}</h3>
                         </div>
                       </li>
                     </Link>
@@ -72,12 +72,13 @@ function Courses({ courses }) {
         <Backgroundcircles/>
       </div> */}
       
-      <div className=" w-1/2 p-8 mt-16 mx-auto" style={{ position: "relative", left: '-2%', marginTop: '-500px' }}>
+      <div className=" w-1/2 p-8 mt-16 mx-auto" style={{ position: "relative", left: '-2%', marginTop: '-300px' }}>
       
-        <h2 className="text-center uppercase tracking-[1px] font-red text-4xl mr-100"><span className="text-[#7F56D9] text-5xl ">C</span>
-        <span className=" ">ourses</span></h2>  
+        <h2 className="text-4xl font-display text-center"><span className="text-[#7F56D9] uppercase text-5xl  ">
+          C</span>
+        <span className="">ourses</span></h2>  
         <p className="text-gray-700 mt-4 text-justify ">
-          <span className="text-[#7F56D9] text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <span className="text-[#7F56D9] text-2xl font-red">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.

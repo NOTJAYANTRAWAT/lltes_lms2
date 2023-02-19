@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@fontsource/red-hat-display": "^4.5.12",
     "@headlessui/react": "^1.7.11",
     "@mui/material": "^5.11.9",
     "@next/font": "13.1.6",

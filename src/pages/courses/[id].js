@@ -36,14 +36,14 @@ function Subjects({ subjects, chapters, id }) {
               position: "absolute",
               left:50,
               right:100,
-              top:100,
+              top:30,
               bottom: 0,
               backgroundImage: `url('/subject_bg.png')`,
               
               backgroundSize: "contain",
               backgroundPosition: "center center",
               backgroundRepeat: "no-repeat",
-              height: "90%",
+              height: "120%",
               width:" 90%",
               filter: "blur(5px)"
               
@@ -52,7 +52,7 @@ function Subjects({ subjects, chapters, id }) {
         
         
         <motion.div className=" flex items-center snap-mandatory snap-y ">
-        <ul ul className=" list-none p-8  mt-5" >
+        <ul ul className=" list-none p-8  mt-5"style={{ width:2000 }} >
             {
                 subjects.map(subject => (
                     <li 
@@ -61,7 +61,7 @@ function Subjects({ subjects, chapters, id }) {
                       className={` w-42 max-w-auto bg-[#Ffffff] shadow-2xl opacity-80 rounded-lg my-8 flex items-center`}
                        style = {{Width:"500px", height:"150px"}}>
                         <div className="flex-1 items-center mr-40 ml-80 justify-center ">
-                         <h3 className="text-3xl space-y-10 font-bold py-10 mx-10 text-center ">{subject.fullname}</h3>
+                         <h3 className="text-2xl space-y-10  font-bold font-inter ">{subject.fullname}</h3>
                        </div>
                     </li>
                 ))
@@ -69,11 +69,11 @@ function Subjects({ subjects, chapters, id }) {
         
         </ul>
 
-        <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-400px', marginLeft: '20%' }}  >
-          <h2 className="text-center uppercase  text-black font-inter text-4xl ml-100 "><span className="text-[#7F56D9]">S</span>
+        <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-100px', marginLeft: '10%' }}  >
+          <h2 className="text-center  font-display text-4xl ml-100 "><span className="text-[#7F56D9] text-5xl uppercase">S</span>
           ubjects</h2>
           <p className="text-gray-700 mt-4  font-inter ">
-            <span className="text-[#7F56D9] text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            <span className="text-[#7F56D9] font-bold text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
@@ -85,7 +85,7 @@ function Subjects({ subjects, chapters, id }) {
           isOpen ?
           
            (
-            <div className=" mt-10 rounded-fullxl fixed  border shadow-2xl   bg-[#e8f1f2] scroll" style={{ top: "50%",
+            <div className=" mt-10 rounded-xl fixed  border shadow-2xl shadow-transparent  bg-[#e8f1f2] scroll" style={{ top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
           width: '1000px', height: '550px', overflowY: 'auto'  }}>
@@ -95,11 +95,11 @@ function Subjects({ subjects, chapters, id }) {
               >
                 Back
               </button>
-            <ul className="list-none p-8 mx-4 h-860 w-1440 "  style={{ width: 140 }}>
+            <ul className="list-none p-8   mx-4 h-860 w-1440 "  style={{ width: 140 }}>
                 {chaptersList.map(chapter => (
 
                   <Link href={`/courses/notes/${chapter.lid}`} key={chapter.lid}>
-                    <li key={chapter.lid} className=" ml-10 text-centre mt-6 h-32 text-center max-w-full my-8 rounded-xl border
+                    <li key={chapter.lid} className=" ml-10 text-centre mt-6 opacity-80 h-32 text-center max-w-full my-8 rounded-xl border
                     border-black flex items-center"style={{ minWidth: "800px" }}>
                       <h3 className="text-xl text-[#7F56D9] ml-10 space-y-10 font-inter font-bold">{chapter.lesson}</h3>
                     </li>
