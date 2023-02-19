@@ -10,5 +10,7 @@ module.exports = {
       // Add any other font families you want to use here
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true })
+  ],
 }

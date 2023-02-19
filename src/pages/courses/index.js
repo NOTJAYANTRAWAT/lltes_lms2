@@ -33,7 +33,7 @@ function Courses({ courses }) {
     return (
       <>
       <Navbar />
-      <motion.div className="flex items-center bg-[#e8f1f2]"  style={{ position: "relative" }}> 
+      <motion.div className="flex  items-center bg-[#e8f1f2]"  style={{ position: "relative" }}> 
       <div className="mt-10 ml-4" style={{
         position: "absolute",
         left: 100,
@@ -72,6 +72,9 @@ function Courses({ courses }) {
         <Backgroundcircles/>
       </div> */}
       
+      <div style={{ position: "relative", left: ' 1%', marginTop: '-400px' }} >
+               <Backgroundcircles/>
+      </div>
       <div className=" w-1/2 p-8 mt-16 mx-auto" style={{ position: "relative", left: '-2%', marginTop: '-300px' }}>
       
         <h2 className="text-4xl font-display text-center"><span className="text-[#7F56D9] uppercase text-5xl  ">
