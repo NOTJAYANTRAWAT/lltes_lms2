@@ -102,7 +102,10 @@ function Subjects({ subjects, chapters, id }) {
                 Back
               </button>
               <AnimatePresence>
-                
+                <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 3 }}
+                exit={{ opacity: 3 }}>
             <ul className="list-none p-8   mx-4 h-860 w-1440 "  style={{ width: 140 }}>
                 {chaptersList.map(chapter => (
 
@@ -121,6 +124,7 @@ function Subjects({ subjects, chapters, id }) {
                 ))}
                 
               </ul>
+              </motion.div>
               </AnimatePresence>
             <div className="p-8"> 
                          
