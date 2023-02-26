@@ -69,11 +69,11 @@ function Subjects({ subjects, chapters, id }) {
         
         </ul>
 
-        <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-100px', marginLeft: '10%' }}  >
+        <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-300px', marginLeft: '10%' }}  >
           <h2 className="text-center  font-display text-4xl ml-100 "><span className="text-[#7F56D9] text-5xl uppercase">S</span>
           ubjects</h2>
           <p className="text-gray-700 mt-4  font-inter ">
-            <span className="text-[#7F56D9] font-bold text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            <span className="text-[#7F56D9] font-bold text-2xl justify-center text-center">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.

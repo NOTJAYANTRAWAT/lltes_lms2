@@ -31,66 +31,61 @@ const stagger = {
 
 function Courses({ courses }) {
     return (
-      <>
+      <div  className=" bg-[#e8f1f2] h-screen">
       <Navbar />
-      <motion.div className="flex  items-center bg-[#e8f1f2]"  style={{ position: "relative" }}> 
-      <div className="mt-10 ml-4" style={{
-        position: "absolute",
-        left: 100,
-        right:100,
-        top:100,
-        bottom: 0,
-        backgroundImage: `url('/bgimage.png')`,
-        
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        height: "80%",
-        width: "80%",
-        filter: "blur(3px)"}}>
-      </div>
-        
+      <motion.div className="flex  items-center "  style={{ position: "relative" }}> 
       
         
-        <ul className="list-none p-8 mt-5" style={{ width: 1000, position: "relative", zIndex: 1 }}>
-        <motion.div variants={stagger} >
-            {
-                courses.map(course => (
-                    <Link key={course.id} href={`/courses/${course.id}`}>
-                      <li key={course.id} className={` w-42 max-w-auto shadow-2xl bg-[#FFFFFF] opacity-80 rounded-lg my-8 flex items-center`} 
-                      style={{Width: "200px",height:'150px' }}>
-                        <div className="flex-1 items-center mr-40 ml-80 ">
-                          <h3 className="text-2xl space-y-10 font-inter font-bold ">{course.name}</h3>
-                        </div>
-                      </li>
-                    </Link>
-                ))
-            }
-        </motion.div>
+      
+      <div className="  p-3 mt-16 mx-auto" >
+      
+      <h2 className="text-6xl font-display text-center"><span className="text-[#7F56D9] uppercase text-6xl  ">
+        C</span>
+      <span className="">ourses</span></h2>  
+      <p className="text-gray-700 text-centerfont-red mt-2 max-w-md mx-auto">
+      <span className="text-[#7F56D9] text-2xl font-red">L</span>orem ipsum dolor sit amet, 
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+      
+      <ul className="list-none p-3  mx-auto z-10 mt-1 space-y-10" style={{ maxWidth: 1000 }}>
+          <motion.div variants={stagger} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "4rem" }} >
+            {courses.map(course => (
+              <Link key={course.id} href={`/courses/${course.id}`}>
+                <li key={course.id} className="w-full object-center max-w-sm shadow-2xl bg-white opacity-80 rounded-lg my-8 flex flex-col items-center space-y-4" style={{ minWidth: "200px", height:'250px' }}>
+                  <motion.img
+                    whileHover={{
+                      position: 'relative',
+                      zIndex: 1,
+                      scale: [.9, 1],
+                      transition: {
+                        duration: 0.2
+                      }
+                    }}
+                    whileTap={{
+                      scale: 0.7,
+                      rotate: -360,
+                      borderRadius: "120%"
+                    }}
+                    src={`/${course.id}.png`}
+                    alt={course.name}
+                    className="w-[150px] h-[150px] my-4"
+                  />
+                  <div className="flex-1 mt-2 text-center">
+                    <h3 className="text-2xl font-red font-bold">{course.name}</h3>
+                  </div>
+                </li>
+              </Link>
+            ))}
+          </motion.div>
         </ul>
-        {/* <div style={{ position: "relative", left: '20%', marginTop: '-500px' }} >
+        {/* <div style={{ position: "relative", left: '3%', marginTop: '-400px' }} >
         <Backgroundcircles/>
       </div> */}
-      
-      <div style={{ position: "relative", left: ' 1%', marginTop: '-400px' }} >
-               <Backgroundcircles/>
-      </div>
-      <div className=" w-1/2 p-8 mt-16 mx-auto" style={{ position: "relative", left: '-2%', marginTop: '-300px' }}>
-      
-        <h2 className="text-4xl font-display text-center"><span className="text-[#7F56D9] uppercase text-5xl  ">
-          C</span>
-        <span className="">ourses</span></h2>  
-        <p className="text-gray-700 mt-4 text-justify ">
-          <span className="text-[#7F56D9] text-2xl font-red">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-          
-        </p>
-      </div>
+      </div>  
       </motion.div>
 
-      </>
+      </div>
     )
   }
 
